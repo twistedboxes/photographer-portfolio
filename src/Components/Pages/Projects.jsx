@@ -3,23 +3,23 @@ const Projects = (props) => {
   const projList = [
     {
       category: "Wedding",
-      img: "https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg",
+      img: "./src/assets/thumbnails/wedding.jpg",
     },
     {
       category: "Street",
-      img: "https://images.pexels.com/photos/379419/pexels-photo-379419.jpeg",
+      img: "./src/assets/thumbnails/street.jpg",
     },
     {
       category: "Sport",
-      img: "https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg",
+      img: "./src/assets/thumbnails/sport.jpg",
     },
     {
       category: "Portraits",
-      img: "https://images.pexels.com/photos/4750165/pexels-photo-4750165.jpeg",
+      img: "./src/assets/thumbnails/portrait.jpg",
     },
     {
       category: "Portraits",
-      img: "https://images.pexels.com/photos/4754648/pexels-photo-4754648.jpeg",
+      img: "./src/assets/thumbnails/portrait-2.jpg",
     },
   ];
 

@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
-import Stripe from "../Stripe";
+import { useState } from "react";
 
 const Contact = (props) => {
+  const [submitted, setSubmitted] = useState(false);
+
   const display = props.display;
+  function handleSubmit(ev) {
+    ev.preventDefault();
+    console.log("form submitted");
+    setSubmitted(true);
+    console.log(ev.target.children);
+    ev.target.reset();
+    setTimeout(() => {
+      let confirmModal = document.getElementById("submitConfirm");
+      confirmModal.classList.add("hidden");
+      location.reload();
+    }, 2500);
+  }
+
   return (
     <>
       {display == "Contact" && (
@@ -16,6 +31,7 @@ const Contact = (props) => {
               <span className="font-bold"> Let's work together</span>.
             </p>
             <motion.form
+              onSubmit={handleSubmit}
               animate={{ y: 0, opacity: 1 }}
               initial={{ y: 50, opacity: 0 }}
               transition={{
@@ -54,8 +70,21 @@ const Contact = (props) => {
                 Submit
               </button>
             </motion.form>
+            {submitted == true && (
+              <motion.div
+                id="submitConfirm"
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1 }}
+                className="bg-white/80 w-full fixed top-0 bottom-0 left-0 right-0 text-center h-full flex justify-center items-center"
+              >
+                <div className="font-serif shadow-lg bg-green-500 text-white rounded-lg p-2 w-1/3">
+                  <h1 className=" font-bold">Thank you</h1>
+                  <p>I'll be in touch as soon as possible!</p>
+                </div>
+              </motion.div>
+            )}
           </div>
-          <Stripe />
         </div>
       )}
     </>

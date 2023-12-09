@@ -18,6 +18,7 @@ function Hamburger(props) {
     <>
       {open && (
         <motion.div
+          onMouseLeave={props.callback}
           animate={{ x: 10 }}
           initial={{ x: 200 }}
           transition={{ type: "tween", duration: 0.3 }}

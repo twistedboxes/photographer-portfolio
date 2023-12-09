@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Stripe from "../Stripe";
 
 const Home = (props) => {
   const display = props.display;
@@ -48,7 +47,6 @@ const Home = (props) => {
               Vision beyond the lens.
             </h2>
           </motion.div>
-          <Stripe />
         </div>
       )}
     </>

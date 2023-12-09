@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "./Components/Header";
-import ImageSlider from "./Components/ImageSlider";
 import Menu from "./Components/Menu";
 import Projects from "./Components/Pages/Projects";
 import Home from "./Components/Pages/Home";
@@ -13,6 +12,7 @@ function App() {
     let currentPage = ev.target.dataset.page;
     setPage(currentPage);
   }
+
   return (
     <div className="w-screen max-w-full min-h-screen h-full flex flex-col px-4 bg-gray-50 ">
       <Header pageDisplay={pageSelect} />
@@ -20,7 +20,7 @@ function App() {
       <Projects display={page} />
       <Home display={page} />
       <Contact display={page} />
-      <About display={page} />
+      <About display={page} pageDisplay={pageSelect} />
     </div>
   );
 }

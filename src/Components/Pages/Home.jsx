@@ -30,7 +30,7 @@ const Home = (props) => {
               bounce: 0.2,
               delay: 0.1,
             }}
-            src="../src/assets/hero/hero-transp-tri.png"
+            src="../assets/hero/hero-transp-tri.png"
           />
 
           <motion.div

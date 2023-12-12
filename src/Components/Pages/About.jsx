@@ -7,7 +7,7 @@ const About = (props) => {
           <div className=" lg:max-w-[30vw] md:max-w-[50vw] min-2-[300px] max-w-[80vw] p-2 flex flex-col items-center">
             <img
               className="w-1/4 aspect-square object-cover rounded-full shadow-lg m-2 p-1 filter grayscale"
-              src="./src/assets/thumbnails/propic.jpg"
+              src="/assets/thumbnails/propic.jpg"
               alt="propic"
             />
             <h1 className="text-center text-black font-serif text-3xl tracking-wide mb-4">
